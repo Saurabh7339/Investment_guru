@@ -1,0 +1,268 @@
+[32mINFO[0m:     2025-07-15 20:21:57 in function analyze_client to get the analysis
+[32mINFO[0m:     2025-07-15 20:21:57 in function retrieve_context before executing the context for recommendation
+[32mINFO[0m:     2025-07-15 20:21:57 in function generate_recommendations before executing the llm
+[32mINFO[0m:     2025-07-15 20:27:11 in function analyze_client to get the analysis , analysis is {'key_factors': {'risk_tolerance': 'Low', 'investment_horizon': '5-10 years', 'goals': 'Capital preservation and steady income', 'current_portfolio': {'stocks': 30, 'bonds': 60, 'cash': 10}}}
+[32mINFO[0m:     2025-07-15 20:27:11 in function retrieve_context before executing the context for recommendation
+[32mINFO[0m:     2025-07-15 20:27:11 the retrieved context is Source: data/dividend_etfs.csv
+Content: Ticker: VYM
+Name: Vanguard High Dividend Yield ETF
+Yield: 3.1%
+Expense Ratio: 0.06%
+5Y Performance: 8.7%
+Risk Level: Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: NOBL
+Name: S&P 500 Dividend Aristocrats ETF
+Yield: 2.8%
+Expense Ratio: 0.35%
+5Y Performance: 7.9%
+Risk Level: Medium-Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: SPYD
+Name: SPDR Portfolio S&P 500 High Div ETF
+Yield: 4.2%
+Expense Ratio: 0.07%
+5Y Performance: 6.5%
+Risk Level: Medium
+[32mINFO[0m:     2025-07-15 20:27:11 in function generate_recommendations before executing the llm
+[32mINFO[0m:     2025-07-15 20:27:11 printing the prompt here before calling the llm --> 
+        You are a financial advisor creating personalized investment recommendations.
+        
+        Client Profile:
+        {
+  "name": "Robert Johnson",
+  "age": 68,
+  "risk_tolerance": "Low",
+  "investment_goals": "Capital preservation and steady income",
+  "investment_history": {
+    "years_active": 30,
+    "previous_strategy": "Dividend stocks and bonds"
+  },
+  "portfolio": {
+    "stocks": 30,
+    "bonds": 60,
+    "cash": 10
+  },
+  "investment_horizon": "5-10 years",
+  "investor_type": "Retired",
+  "total_assets": 1200000.0,
+  "preferred_investment_types": [
+    "Dividend ETFs",
+    "Treasury Bonds",
+    "CDs"
+  ],
+  "constraints": {}
+}
+        
+        Relevant Market Context:
+        Source: data/dividend_etfs.csv
+Content: Ticker: VYM
+Name: Vanguard High Dividend Yield ETF
+Yield: 3.1%
+Expense Ratio: 0.06%
+5Y Performance: 8.7%
+Risk Level: Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: NOBL
+Name: S&P 500 Dividend Aristocrats ETF
+Yield: 2.8%
+Expense Ratio: 0.35%
+5Y Performance: 7.9%
+Risk Level: Medium-Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: SPYD
+Name: SPDR Portfolio S&P 500 High Div ETF
+Yield: 4.2%
+Expense Ratio: 0.07%
+5Y Performance: 6.5%
+Risk Level: Medium
+        
+        Generate 3-5 specific investment recommendations tailored to this client.
+        For each recommendation, include:
+        - Asset class
+        - Specific investment (if applicable)
+        - Allocation percentage
+        - Rationale
+        - Expected risk level
+        - Time horizon
+        
+        Structure the output as a JSON list.
+         and also context here -> Source: data/dividend_etfs.csv
+Content: Ticker: VYM
+Name: Vanguard High Dividend Yield ETF
+Yield: 3.1%
+Expense Ratio: 0.06%
+5Y Performance: 8.7%
+Risk Level: Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: NOBL
+Name: S&P 500 Dividend Aristocrats ETF
+Yield: 2.8%
+Expense Ratio: 0.35%
+5Y Performance: 7.9%
+Risk Level: Medium-Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: SPYD
+Name: SPDR Portfolio S&P 500 High Div ETF
+Yield: 4.2%
+Expense Ratio: 0.07%
+5Y Performance: 6.5%
+Risk Level: Medium
+[32mINFO[0m:     2025-07-15 20:30:53 in function generate_recommendations after executing the llm
+[32mINFO[0m:     2025-07-15 20:34:10 in function analyze_client to get the analysis , analysis is {'key_factors': {'risk_tolerance': 'Low', 'investment_horizon': '5-10 years', 'goals': 'Capital preservation and steady income', 'current_portfolio': {'stocks': 30, 'bonds': 60, 'cash': 10}}}
+[32mINFO[0m:     2025-07-15 20:34:10 in function retrieve_context before executing the context for recommendation
+[32mINFO[0m:     2025-07-15 20:34:11 the retrieved context is Source: data/dividend_etfs.csv
+Content: Ticker: VYM
+Name: Vanguard High Dividend Yield ETF
+Yield: 3.1%
+Expense Ratio: 0.06%
+5Y Performance: 8.7%
+Risk Level: Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: NOBL
+Name: S&P 500 Dividend Aristocrats ETF
+Yield: 2.8%
+Expense Ratio: 0.35%
+5Y Performance: 7.9%
+Risk Level: Medium-Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: SPYD
+Name: SPDR Portfolio S&P 500 High Div ETF
+Yield: 4.2%
+Expense Ratio: 0.07%
+5Y Performance: 6.5%
+Risk Level: Medium
+[32mINFO[0m:     2025-07-15 20:34:11 in function generate_recommendations before executing the llm
+[32mINFO[0m:     2025-07-15 20:34:11 printing the prompt here before calling the llm --> 
+        You are a financial advisor creating personalized investment recommendations.
+        
+        Client Profile:
+        {
+  "name": "Robert Johnson",
+  "age": 68,
+  "risk_tolerance": "Low",
+  "investment_goals": "Capital preservation and steady income",
+  "investment_history": {
+    "years_active": 30,
+    "previous_strategy": "Dividend stocks and bonds"
+  },
+  "portfolio": {
+    "stocks": 30,
+    "bonds": 60,
+    "cash": 10
+  },
+  "investment_horizon": "5-10 years",
+  "investor_type": "Retired",
+  "total_assets": 1200000.0,
+  "preferred_investment_types": [
+    "Dividend ETFs",
+    "Treasury Bonds",
+    "CDs"
+  ],
+  "constraints": {}
+}
+        
+        Relevant Market Context:
+        Source: data/dividend_etfs.csv
+Content: Ticker: VYM
+Name: Vanguard High Dividend Yield ETF
+Yield: 3.1%
+Expense Ratio: 0.06%
+5Y Performance: 8.7%
+Risk Level: Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: NOBL
+Name: S&P 500 Dividend Aristocrats ETF
+Yield: 2.8%
+Expense Ratio: 0.35%
+5Y Performance: 7.9%
+Risk Level: Medium-Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: SPYD
+Name: SPDR Portfolio S&P 500 High Div ETF
+Yield: 4.2%
+Expense Ratio: 0.07%
+5Y Performance: 6.5%
+Risk Level: Medium
+        
+        Generate 3-5 specific investment recommendations tailored to this client.
+        For each recommendation, include:
+        - Asset class
+        - Specific investment (if applicable)
+        - Allocation percentage
+        - Rationale
+        - Expected risk level
+        - Time horizon
+        
+        Structure the output as a JSON list.
+         and also context here -> Source: data/dividend_etfs.csv
+Content: Ticker: VYM
+Name: Vanguard High Dividend Yield ETF
+Yield: 3.1%
+Expense Ratio: 0.06%
+5Y Performance: 8.7%
+Risk Level: Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: NOBL
+Name: S&P 500 Dividend Aristocrats ETF
+Yield: 2.8%
+Expense Ratio: 0.35%
+5Y Performance: 7.9%
+Risk Level: Medium-Low
+
+Source: data/dividend_etfs.csv
+Content: Ticker: SPYD
+Name: SPDR Portfolio S&P 500 High Div ETF
+Yield: 4.2%
+Expense Ratio: 0.07%
+5Y Performance: 6.5%
+Risk Level: Medium
+[32mINFO[0m:     2025-07-15 20:38:14 in function generate_recommendations after executing the llm
+[32mINFO[0m:     2025-07-15 20:38:14 the recommnedations are Here are 3-5 specific investment recommendations tailored to Robert Johnson:
+
+```
+[
+  {
+    "asset_class": "Fixed Income",
+    "specific_investment": "Treasury Bonds",
+    "allocation_percentage": 40,
+    "rationale": "Given Robert's low risk tolerance and capital preservation goal, Treasury Bonds provide a stable source of income with minimal market volatility. This allocation also helps to diversify his portfolio.",
+    "expected_risk_level": "Low",
+    "time_horizon": "5-10 years"
+  },
+  {
+    "asset_class": "Equities",
+    "specific_investment": "VYM - Vanguard High Dividend Yield ETF",
+    "allocation_percentage": 20,
+    "rationale": "As a retired investor, Robert is likely seeking steady income streams. VYM's dividend yield of 3.1% and low risk profile make it an attractive addition to his portfolio.",
+    "expected_risk_level": "Low",
+    "time_horizon": "5-10 years"
+  },
+  {
+    "asset_class": "Equities",
+    "specific_investment": None,
+    "allocation_percentage": 20,
+    "rationale": "Robert's preferred investment types include Dividend ETFs, so I'm recommending a small allocation to this asset class. However, given his low risk tolerance and medium-term time horizon, we'll focus on lower-risk options like VYM.",
+    "expected_risk_level": "Low",
+    "time_horizon": "5-10 years"
+  }
+]
+```
+
+And as an additional consideration:
+
+* Since Robert has a preference for CDs (Certificates of Deposit), I would recommend allocating up to 20% of his portfolio to short-term CD laddering strategy. This approach involves investing in multiple CDs with staggered maturity dates, providing liquidity and reducing interest rate risk.
+* Consider adding NOBL or SPYD to the mix if Robert's risk tolerance increases over time or if he wants to explore other dividend-focused investment options. These ETFs have shown consistent performance and could provide additional income streams.
+
+These recommendations are designed to preserve capital, generate steady income, and align with Robert's risk tolerance and investment goals.
